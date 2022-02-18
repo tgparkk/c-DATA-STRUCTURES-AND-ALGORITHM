@@ -120,9 +120,15 @@ int main()
 		std::cout << "예외 발생!" << std::endl;
 	}
 
+
+
 	// 깊은 복사
 	auto class2 = class1;
+	std::cout << &class2 << std::endl;
 	std::cout << "1반을 복사하여 2반 생성: " << class2.to_string() << std::endl;
+
+	std::cout << &class1 << std::endl;
+	std::cout << "1반: " << class1.to_string() << std::endl;
 
 	// 두 학급을 합쳐서 새로운 큰 학급을 생성
 	auto class3 = class1 + class2;
