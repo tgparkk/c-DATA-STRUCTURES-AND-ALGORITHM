@@ -9,6 +9,7 @@ class Job
 
 	static int count;
 
+
 public:
 	Job(const std::string& u, int p) : user(u), pages(p), id(++count) {}
 
