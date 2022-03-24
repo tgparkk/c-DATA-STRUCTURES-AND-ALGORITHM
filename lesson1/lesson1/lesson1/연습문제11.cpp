@@ -58,7 +58,7 @@ struct graph
 
 	void addEdge(const city c1, const city c2, int dis)
 	{
-		std::cout << "에지 추가: " << c1 << "-" << c2 << "=" << dis << std::endl;
+		//std::cout << "에지 추가: " << c1 << "-" << c2 << "=" << dis << std::endl;
 
 		auto n1 = static_cast<int>(c1);
 		auto n2 = static_cast<int>(c2);
@@ -69,7 +69,7 @@ struct graph
 
 	void removeEdge(const city c1, const city c2)
 	{
-		std::cout << "에지 삭제: " << c1 << "-" << c2 << std::endl;
+		//std::cout << "에지 삭제: " << c1 << "-" << c2 << std::endl;
 
 		auto n1 = static_cast<int>(c1);
 		auto n2 = static_cast<int>(c2);
@@ -94,6 +94,10 @@ int main()
 
 	g.addEdge(city::SEATTLE, city::LONDON, 8000);
 	g.removeEdge(city::SEATTLE, city::LONDON);
+
+	
+	// enum 클래스를 int 에 대입 가능한가
+	std::cout << city::DUBAI << std::endl;
 
 	return 0;
 }
